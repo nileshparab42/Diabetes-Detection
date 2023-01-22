@@ -1,4 +1,4 @@
-![Cover image](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/UHSPP-Cover.png)
+![Cover image](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/DD-Cover.png)
 
 # Diabetes Ditection
 
@@ -9,7 +9,7 @@ A diabetes detection machine learning project involves using data and algorithms
 Diabetes detection machine learning project is a system that uses algorithms, statistical models and historical data to predict the likelihood of an individual having diabetes. The goal is to use features like Glucose, age, and Blood Pressure to identify individuals who have diabetes or are at risk of developing it. Machine learning models are trained using this data and can then be used to make predictions on new individuals.
 
 
-![Home page](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/home.png)
+![Home page](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/home.png)
 
 
 ## About Dataset
@@ -50,13 +50,11 @@ The process of feature selection in machine learning is used to identify and sel
 
 #### correlation matrix
 
-![heat map](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/heatmap.png)
+![heat map](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/heatmap.png)
 
 A correlation matrix can be used to identify highly correlated features, which can then be removed or consolidated. Highly correlated features can cause a problem in machine learning models as they can introduce multicollinearity, which can lead to unstable and unreliable model estimates.
 
-![con1 variable](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/scatter1.png)
-![con2 variable](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/scatter2.png)
-
+![con variable](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/sns.png)
 
 
 ## Outlier Treatment
@@ -69,13 +67,14 @@ Outlier treatment is the process of identifying and handling extreme values or o
 
 - **Interquartile range (IQR):** Outliers can be identified by calculating the interquartile range (IQR), which is the difference between the first and third quartile. Values that fall outside of 1.5 * IQR above the third quartile or 1.5 * IQR below the first quartile are considered outliers.
 
-![Outlier1](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/boxplot1.png)
+![Outlier](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/outlier.png)
 
-![Outlier2](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/boxplot2.png)
 
 ### Methods used to treat outliers
 
 - **Imputing the missing values:** This method can be used to replace outliers with the mean, median, or mode of the dataset.
+
+![Outlier Tret](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/outlier-tret.png)
 
 ## Features transformation and scaling
 
@@ -105,7 +104,7 @@ Outlier treatment is the process of identifying and handling extreme values or o
 
 ### Evaluation of algorithm
 
-![Results](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/result.png)
+![Results](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/result.png)
 
 - **Confusion Matrix**
 
@@ -133,6 +132,7 @@ Hyperparameter tuning is the process of selecting the best set of hyperparameter
 - penalty: ['l2']
 - c_values: [100, 10, 1.0, 0.1, 0.01]
 
+![Results heatmap](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/res1.png)
 Confusion matrix accuracy for Logistic regression After Hyper Tuning(Complete dataset): 0.7760416666666666
 
 So, here we are getting better results with Logistic regression. Hence we are selecting a Logistic regression as the main model for the web app.
@@ -141,11 +141,11 @@ So, here we are getting better results with Logistic regression. Hence we are se
 
 **Flask** is a web framework for building web applications using the Python programming language. It is a micro-framework that provides the basic functionality needed to build web applications, such as routing and request handling, without including a lot of additional features or libraries. This makes it lightweight and easy to use, but also allows for flexibility and customization.
 
-![Value insertion](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/input.png)
+![Value insertion](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/input.png)
 
 After inserting values for the attribute such as the Glucose, age, and Blood Pressure our flask web app will predict the whether report indicates the presence of diabetes or not.
 
-![Predictions](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/output.png)
+![Predictions](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/output.png)
 
 ## Installation
 
@@ -153,7 +153,7 @@ After inserting values for the attribute such as the Glucose, age, and Blood Pre
 
 To download a diabetes detection, you can use the git clone command. This command creates a copy of the repository in a new directory on your local machine.
 ```
-git clone https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction.git
+git clone https://github.com/nileshparab42/Diabetes-Detection.git
 ```
 To set up the project, you can use the pip command to install the required packages specified in the requirements.txt file.
 ```
@@ -179,7 +179,7 @@ jupyter lab /path/to/notebook/directory
 It will open the Jupyter notebook or lab in the specified directory, making it easier to navigate to the notebook you want to open.
 
 
-### Installation of Car Dekho Selling Price Prediction web app
+### Installation of Diabetes Detection App
 
 To install a Flask project, you can use the following commands in your command line interface:
 
