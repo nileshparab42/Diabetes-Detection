@@ -1,12 +1,12 @@
 ![Cover image](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/UHSPP-Cover.png)
 
-# USA Housing Selling Price Prediction
+# Diabetes Ditection
 
-A house price prediction project is a data-driven approach to estimating the future value of a residential property using statistical and machine learning techniques with the goal of providing insight and forecasting capabilities.
+A diabetes detection machine learning project involves using data and algorithms to train a model to accurately predict the likelihood of an individual having diabetes based on various features such as Glucose, age, and Blood Pressure.
 
 ## Description
 
-A house price prediction project is a predictive modeling project that uses statistical and machine learning techniques to predict the future sale price of a residential property based on historical data and various other factors. The project typically involves gathering and cleaning real estate data, developing a model, evaluating model performance, deploying the model, and maintaining the model over time.
+Diabetes detection machine learning project is a system that uses algorithms, statistical models and historical data to predict the likelihood of an individual having diabetes. The goal is to use features like Glucose, age, and Blood Pressure to identify individuals who have diabetes or are at risk of developing it. Machine learning models are trained using this data and can then be used to make predictions on new individuals.
 
 
 ![Home page](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/home.png)
@@ -14,18 +14,33 @@ A house price prediction project is a predictive modeling project that uses stat
 
 ## About Dataset
 
-This dataset contains information about previously sold houses.
-This data can be used for a lot of purposes such as price prediction to exemplify the use of linear regression in Machine Learning.
+### Context
+This dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective is to predict based on diagnostic measurements whether a patient has diabetes.
 
-**The columns in the given dataset are as follows:**
+### Content
+Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage.
 
-- Avg_Area_Income
-- Avg_Area_House_Age
-- Avg_Area_Number_of_Rooms
-- Avg_Area_Number_of_Bedrooms
-- Area_Population
-- Price
-- Address
+- Pregnancies: Number of times pregnant
+- Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test
+- BloodPressure: Diastolic blood pressure (mm Hg)
+- SkinThickness: Triceps skin fold thickness (mm)
+- Insulin: 2-Hour serum insulin (mu U/ml)
+- BMI: Body mass index (weight in kg/(height in m)^2)
+- DiabetesPedigreeFunction: Diabetes pedigree function
+- Age: Age (years)
+- Outcome: Class variable (0 or 1)
+
+### Sources
+(a) Original owners: National Institute of Diabetes and Digestive and
+Kidney Diseases
+(b) Donor of database: Vincent Sigillito (vgs@aplcen.apl.jhu.edu)
+Research Center, RMI Group Leader
+Applied Physics Laboratory
+The Johns Hopkins University
+Johns Hopkins Road
+Laurel, MD 20707
+(301) 953-6231
+(c) Date received: 9 May 1990
 
 ## Feature Selection
 
@@ -78,46 +93,49 @@ Outlier treatment is the process of identifying and handling extreme values or o
 
 ### Selection of model
 
-- **Linear regression** is a supervised machine learning algorithm that is used to predict a continuous dependent variable (i.e. a real value) based on one or more independent variables. It assumes a linear relationship between the independent variables and the dependent variable, and uses this relationship to fit a line through the data points. 
+- **Logistic regression** is a statistical method used for predicting binary outcomes (i.e. outcomes with two possible results, such as success or failure). It is a type of generalized linear model (GLM) that is used to model a binary dependent variable based on one or more independent variables. 
 
-- **Decision Tree Regressor** is a type of supervised machine learning algorithm that is used for regression tasks. It is a decision tree algorithm where each internal node represents a feature and each leaf node represents a predicted value. The tree is constructed by recursively splitting the feature space into smaller regions, with each split chosen to minimize a certain impurity criterion such as mean squared error. 
+- **Naive Bayes classifier** is a probabilistic machine learning algorithm that is based on the Bayes' theorem, which states that the probability of a hypothesis (in this case, a class label) given some observed evidence (in this case, a feature vector) is equal to the probability of the evidence given the hypothesis, multiplied by the prior probability of the hypothesis, divided by the overall probability of the evidence.
 
-- **Random Forest Regressor** is an ensemble machine learning algorithm that is used for regression tasks. It is based on the decision tree algorithm, but instead of building a single decision tree, it builds multiple decision trees and combines their predictions to produce a final result.
+- **K-Nearest Neighbors (KNN)** is a type of instance-based, or lazy, learning algorithm. It is a classification algorithm that is used to assign a class label to an unlabeled observation based on the class labels of the k-nearest observations to it in feature space.
 
-- **Polynomial Regression** is a type of supervised machine learning algorithm that is used for regression tasks. It is similar to linear regression, but instead of fitting a straight line through the data points, it fits a polynomial equation of the form
+- **A Decision Tree Classifier** is a type of supervised learning algorithm (having a pre-defined target variable) that is mostly used in classification problems. It works by recursively partitioning the dataset into subsets based on the values of the input features.
+
+- **Support Vector Classifier (SVC)** is a type of supervised learning algorithm that can be used for classification and regression tasks. The main idea behind SVC is to find the best hyperplane (a decision boundary) that separates the different classes in the feature space. The best hyperplane is the one that maximizes the margin, which is the distance between the hyperplane and the closest data points from each class, also known as support vectors.
 
 ### Evaluation of algorithm
 
-![Outlier Treatment](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/result.png)
-**The R-squared (R2)** is a statistical measure that represents the proportion of the variance in the dependent variable that is predictable from the independent variable(s). It ranges between 0 and 1, where a value of 1 indicates that all variance in the dependent variable is predictable from the independent variable(s) and a value of 0 means that no variance in the dependent variable can be predicted from the independent variable(s). R2 is often used as a measure of how well a model fits the data, with a higher R2 indicating a better fit.
+![Results](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/result.png)
 
-**R-squared values of Algorithms:**
+- **Confusion Matrix**
 
-- Linear Regression: 0.5721618289970026
-- Decision Tree Regressor: 0.7465886696289258
-- Random Forest Regressor: 0.8794610139823527
-- Polynomial Regression: 0.9110287620218143
+A confusion matrix is a table that is used to define the performance of a classification algorithm. Each row of the matrix represents the instances in a predicted class, while each column represents the instances in an actual class (or vice versa). The name stems from the fact that it makes it easy to see if the system is confusing two classes (i.e. commonly mislabeling one as another). The diagonal elements represent the number of points for which the predicted label is equal to the true label, while off-diagonal elements are those that are mislabeled by the classifier. It is a useful tool for understanding the performance of a classification algorithm, including the types of errors that the classifier is making.
 
-We chose the Random Forest Regressor because the highest R-squared value after polynomial regression.
+**Confusion Matrix accuracy of Algorithms:**
+
+- Logistic regression: 0.8053435114503816
+- Naive Bayes classifier: 0.7709923664122137
+- K-Nearest Neighbors (KNN): 0.7366412213740458
+- A Decision Tree Classifier: 0.7404580152671756
+- Support Vector Classifier (SVC): 0.7977099236641222
+
+We chose the Logistic regression because the highest Confusion matrix accuracy.
 
 ### Hyperparameter Tuning
 
 Hyperparameter tuning is the process of selecting the best set of hyperparameters for a machine learning model. Hyperparameters are parameters that are not learned from the data, but are set before training the model.
 
-**Random search:** This method randomly samples hyperparameter values from a predefined distribution. It is more efficient than grid search because it doesn't evaluate all possible combinations, but it still requires a large number of evaluations to find a good set of hyperparameters.
+**Grid search:** is a technique used to tune the hyperparameters of a machine learning model. It is a systematic way of going through multiple combinations of parameter settings, cross-validating as it goes, and returning the best set of parameters that yield the highest performance for a given model. The technique involves specifying a set of values for each hyperparameter, creating a "grid" of all possible combinations of those values, and then training and evaluating a model for each combination of values. 
 
-**Hyperparameters for Random Forest Regressor :**
+**Hyperparameters for Logistic regression :**
 
-- n_estimators: 800,
-- min_samples_split: 2,
-- min_samples_leaf: 1,
-- max_features: 'auto',
-- max_depth: 10,
-- bootstrap: True
+- solvers: ['newton-cg', 'lbfgs', 'liblinear']
+- penalty: ['l2']
+- c_values: [100, 10, 1.0, 0.1, 0.01]
 
-R-squared value of Random Forest After Hyper Tuning: 0.8802638029848904
+Confusion matrix accuracy for Logistic regression After Hyper Tuning(Complete dataset): 0.7760416666666666
 
-So, here we are getting better results with polynomial regression as compared to random forest regressor after hyperparameter tuning. Hence we are selecting a polynomial regressor as the main model for the web app.
+So, here we are getting better results with Logistic regression. Hence we are selecting a Logistic regression as the main model for the web app.
 
 ## Web App for project
 
@@ -125,15 +143,15 @@ So, here we are getting better results with polynomial regression as compared to
 
 ![Value insertion](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/input.png)
 
-After inserting values for the attribute such as the address of the location, area population, average ihncome, number of rooms, age of the house our flask web app will predict the selling price of the house.
+After inserting values for the attribute such as the Glucose, age, and Blood Pressure our flask web app will predict the whether report indicates the presence of diabetes or not.
 
 ![Predictions](https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction/blob/master/assets/output.png)
 
 ## Installation
 
-### Get the USA Housing Selling Price Prediction Repository now.
+### Get the Diabetes Detection.
 
-To download a house price project, you can use the git clone command. This command creates a copy of the repository in a new directory on your local machine.
+To download a diabetes detection, you can use the git clone command. This command creates a copy of the repository in a new directory on your local machine.
 ```
 git clone https://github.com/nileshparab42/USA-Housing-Selling-Price-Prediction.git
 ```
