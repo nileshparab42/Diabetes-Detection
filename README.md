@@ -104,7 +104,7 @@ Outlier treatment is the process of identifying and handling extreme values or o
 
 ### Evaluation of algorithm
 
-![Results](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/result.png)
+![Results](https://github.com/nileshparab42/Diabetes-Detection/blob/master/Assets/res2.png)
 
 - **Confusion Matrix**
 
